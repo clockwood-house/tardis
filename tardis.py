@@ -26,7 +26,7 @@ def device(domain,service,entity_id):
     return response
 
 def light(light,status):
-    if (status) : 
+    if status :
         {
             response = device("light","turn_on",light)
             return response
