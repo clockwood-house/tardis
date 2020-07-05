@@ -18,12 +18,12 @@ headers = {
 
 while True:
     try:
-        response = get(on_url, headers=headers, json=payload )
+        response = post(on_url, headers=headers, json=payload )
         time.sleep(1.0)
-        response = get(off_url, headers=headers, json=payload )
+        response = post(off_url, headers=headers, json=payload )
         time.sleep(1.0)
     except KeyboardInterrupt:
-        response = get(off_url, headers=headers, json=payload )
+        response = post(off_url, headers=headers, json=payload )
         print("Clean exit, light should go off")
 
 
