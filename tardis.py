@@ -22,6 +22,7 @@ tardis_roof  = "light.33648804cc50e3ef7048"
 def device(domain,service,entity_id):
     global server
     myURL = "http://" + server + "/api/services/" + domain + "/" + service
+    print(myURL)
     payload = { "entity_id" : entity_id }
     json_obj = json.dumps(payload)
     response = post(myURL, headers=headers, json=json_obj )
