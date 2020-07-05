@@ -27,5 +27,6 @@ while True:
     except KeyboardInterrupt:
         response = post(off_url, headers=headers, json=payload )
         print("Clean exit, light should go off")
+        sys.exit(0)
 
 
