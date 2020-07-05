@@ -24,8 +24,7 @@ def device(domain,service,entity_id):
     myURL = "http://" + server + "/api/services/" + domain + "/" + service
     print(myURL)
     payload = { "entity_id" : entity_id }
-    json_obj = json.dumps(payload)
-    response = post(myURL, headers=headers, json=json_obj )
+    response = post(myURL, headers=headers, json=payload )
     return response
 
 def light(light,status):
