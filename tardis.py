@@ -3,7 +3,7 @@ import time
 import json
 from requests import post
 
-sys.path.append('..')  # persistent import directory for K9 secrets
+sys.path.append('..')
 
 from k9secrets import token
 
@@ -16,9 +16,6 @@ headers = {
 server = "octopi.local:8123"
 tardis_roof  = "light.33648804cc50e3ef7048"
 tardis_int = "light.33648804cc50e3ef73b5"
-
-#on_url = "http://octopi.local:8123/api/services/light/turn_on"
-#off_url = "http://octopi.local:8123/api/services/light/turn_off"
 
 def device(domain,service,entity_id):
     global server
