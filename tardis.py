@@ -18,7 +18,7 @@ tardis_roof  = "light.33648804cc50e3ef7048"
 #on_url = "http://octopi.local:8123/api/services/light/turn_on"
 #off_url = "http://octopi.local:8123/api/services/light/turn_off"
 
-def device(domain,service,entity_id)
+def device(domain,service,entity_id):
     URL = "http://" + URL + "/api/services/" + domain + "/" + service
     payload = { "entity_id" : entity_id }
     json_obj = json.dumps(payload)
